@@ -1,35 +1,89 @@
-/* Outdated CSS */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-h1 {
-    margin: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
 }
 
 img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+/* Header */
+.site-header {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Navigation (Flexbox) */
+.site-nav {
+    background-color: #333333;
+    padding: 20px;
+}
+
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-nav ul li {
+    margin-bottom: 10px;
+}
+
+.site-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.site-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Layout (Grid) */
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.about, .types, .features {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
