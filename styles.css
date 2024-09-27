@@ -1,89 +1,109 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+/* styles.css */
+
+* {
     box-sizing: border-box;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Header */
-.site-header {
-    background-color: #cccccc;
-    text-align: center;
-    padding: 20px;
-}
-
-h1 {
     margin: 0;
-    font-size: 2rem;
-}
-
-p {
-    margin: 10px 0;
-}
-
-/* Navigation (Flexbox) */
-.site-nav {
-    background-color: #333333;
-    padding: 20px;
-}
-
-.site-nav ul {
-    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.site-nav ul li {
-    margin-bottom: 10px;
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-.site-nav ul li a {
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff5733;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    border-radius: 5px;
 }
 
-.site-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content Layout (Grid) */
-.content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-}
-
-@media (min-width: 768px) {
-    .content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.about, .types, .features {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-}
-
-/* Footer */
-.site-footer {
-    background-color: #cccccc;
+.about, .services, .contact {
+    padding: 50px 0;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+}
+
+.about h2, .services h2, .contact h2 {
+    margin-bottom: 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        margin: 10px 0;
+    }
 }
